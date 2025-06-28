@@ -1,6 +1,6 @@
 # <div align="center"> Gerador de Ambientes </div>
 
-# Sober :
+# Sobre :
 O **Gerador de Ambientes** é uma interface gráfica desenvolvida com `CustomTkinter` que automatiza a criação de projetos com ambientes virtuais em **Python** (usando `venv`) e **JavaScript** (com `Vite + React`).
 
 >  ! Por enquanto só há verção pra Linux.
@@ -10,8 +10,8 @@ O **Gerador de Ambientes** é uma interface gráfica desenvolvida com `CustomTki
 # Interface
 ### De inicio ele só tem duas opções ( Python Venv ) e ( JavaScript react )  
 <div align="center">
-  <img height="210px" src=".github/images/python-venv.png">ㅤ
   <img height="210px" src=".github/images/tela-inicial.png">ㅤ
+  <img height="210px" src=".github/images/python-venv.png">ㅤ
   <img height="210px" src=".github/images/javascript-react.png">ㅤ
 </div>
 
@@ -38,6 +38,6 @@ O **Gerador de Ambientes** é uma interface gráfica desenvolvida com `CustomTki
 ---
 
 # Autor : 
-## Desenvolvido : por **[Thiago Henrique Rodrigues Moura](https://github.com/ThiagoHenriqueRm)**
+## Desenvolvido por : **[Thiago Henrique Rodrigues Moura](https://github.com/ThiagoHenriqueRm)**
 
 ---
