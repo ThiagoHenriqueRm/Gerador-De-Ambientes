@@ -127,7 +127,7 @@ def MK_react(nome, dir, clear):
         cwd=dir
     )
 
-    # 
+    # Istalando as dependençias ( Node modulos )
     subprocess.run(
         ["npm", "install"],
         cwd=DIR
