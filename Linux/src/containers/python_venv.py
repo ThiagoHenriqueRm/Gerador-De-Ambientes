@@ -32,6 +32,8 @@ def Python_Venv():
             openPasta =  checkbox_pasta.get()
             openCode  =  checkbox_vscode.get()
 
+            addGitignore = checkbox_gitignore.get()
+
 
             # Validações 
             nomeOK = NomeValido(nome)
@@ -58,11 +60,11 @@ def Python_Venv():
                     text_color = "#138D19"
                 )
 
-            # Executa a opção de abrir no VSCode
+            # Executa a opção de abrir no VSCode.
             if openCode:
                 subprocess.run(["code", DirProjeto])
 
-            # Executa a opção de abrir a pasta no gerenciador de arquivos
+            # Executa a opção de abrir a pasta no gerenciador de arquivos.
             if openPasta:
                 if platform.startswith("linux"):
                     subprocess.run(["open", DirProjeto])
@@ -70,6 +72,12 @@ def Python_Venv():
                     os.startfile(DirProjeto)
                 elif platform == "darwin":
                     subprocess.run(["open", DirProjeto])
+
+            # Cria o .gitignore.
+            if addGitignore:
+                gitignore_path = os.path.join(DirProjeto, ".gitignore")
+                with open(gitignore_path, "w") as f:
+                    f.write("venv/\n")
 
 
     CTK.set_appearance_mode("dark")
