@@ -147,8 +147,19 @@ def Python_Venv():
         font            = FONTE,
         border_width    = 2,
         corner_radius   = 5
-    );checkbox_pasta.pack(pady=(0, 10), anchor="w", padx=10)
+    );checkbox_pasta.pack(pady=(1, 1), anchor="w", padx=10)
 
+
+    # Checkbox: .gitignore
+    checkbox_gitignore = CTK.CTkCheckBox(
+        checkbox_width  = 18,
+        checkbox_height = 18,
+        master          = ChecFrame,
+        text            = "CRIAR .gitignore?",
+        font            = FONTE,
+        border_width    = 2,
+        corner_radius   = 5
+    );checkbox_gitignore.pack(pady=(0, 10), anchor="w", padx=10)
 
     # Status 
     statusLabel = CTK.CTkLabel(app, text=" - - -", text_color="#CCCCCC", font=FONTE)
