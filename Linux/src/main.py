@@ -5,7 +5,7 @@ CTK.set_appearance_mode("dark")
 CTK.set_default_color_theme("blue")
 
 app = CTK.CTk()
-app.title("Criador de Projeto")
+app.title("GERADOR DE AMBIENTES")
 app.geometry("400x250")
 app.resizable(False, False)
 app.configure(fg_color="#1e1e2e")
