@@ -21,7 +21,7 @@ FRM_TITULO = CTK.CTkFrame(
 TITULO_FONTE = CTK.CTkFont(family="Arial", size=20, weight="bold")
 TITULO = CTK.CTkLabel(
     master = FRM_TITULO,
-    text   = "CRIADOR DE PROJETOS",
+    text   = "GERADOR DE AMBIENTES",
     font   = TITULO_FONTE,
     width  = 327,
 );TITULO.pack()
