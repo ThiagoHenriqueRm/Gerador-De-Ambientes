@@ -41,12 +41,10 @@ FramePython = CTK.CTkFrame(
     border_color  = "#181824",
     border_width  = 20,
 );FramePython.pack(side="left", padx=(5, 0), pady=(1, 1))
-
 PyTitulo = CTK.CTkLabel(
     master = FramePython,
     text   = "PYTHON"
 );PyTitulo.pack()
-
 Python_venv = CTK.CTkButton(
     master  = FramePython, 
     command = Python_Venv,
@@ -63,12 +61,10 @@ FrameJavaScript = CTK.CTkFrame(
     border_color  = "#181824",
     border_width  = 20,
 );FrameJavaScript.pack(side="left", padx=5, pady=(1, 1))
-
 JsTitulo = CTK.CTkLabel(
     master = FrameJavaScript,
     text   = "JAVASCRIPT"
 );JsTitulo.pack()
-
 JavaScript_react = CTK.CTkButton(
     master  = FrameJavaScript,
     command = Javascript_React,
