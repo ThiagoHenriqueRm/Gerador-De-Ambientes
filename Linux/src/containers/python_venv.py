@@ -1,6 +1,7 @@
 from imports import *
 from Tools import MK_Venv, PythonDep, NomeValido, DirValido, DesktopDir
 
+from containers import home
 
 def Python_Venv():
 
@@ -116,8 +117,12 @@ def Python_Venv():
 
 
     # Botão pra selecionar o diretorio
-    btn_selecionar = CTK.CTkButton(frame_dir, text="📂", width=85, command=SelecionarDir)
-    btn_selecionar.pack(side="right")
+    btn_selecionar = CTK.CTkButton(
+        master  = frame_dir, 
+        text    = "📂", 
+        width   = 85, 
+        command = SelecionarDir
+    );btn_selecionar.pack(side="right")
 
 
     # Frame para as Checkboxs
@@ -173,14 +178,34 @@ def Python_Venv():
     statusLabel = CTK.CTkLabel(app, text=" - - -", text_color="#CCCCCC", font=FONTE)
     statusLabel.pack(pady=5)
 
- 
+    # Frame button
+    ferme_button = CTK.CTkFrame(
+        master   = app,
+        fg_color = "#1e1e2e",
+    );ferme_button.pack(pady=20)
+
     # Botão criar projeto
     btn_criar = CTK.CTkButton(
-        master   = app, 
+        master   = ferme_button, 
         text     = " CRIAR PROJETO ",
         font     = FONTE,
         height   = 35,
         command  = CriarProjeto
-    );btn_criar.pack(pady=20)
+    );btn_criar.pack(side="left")
+
+
+    def Voltar():
+        app.destroy()
+        home.Home()
+
+    btn_voltar = CTK.CTkButton(
+        master  = ferme_button,
+        text    = "Voltar ➡",
+        command = Voltar,
+        font    = FONTE,
+        height  = 35,
+        width   = 35
+    );btn_voltar.pack(side="left", padx=(10, 0))
+
 
     app.mainloop()

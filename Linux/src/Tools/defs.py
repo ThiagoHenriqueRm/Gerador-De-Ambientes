@@ -94,6 +94,11 @@ def DesktopDir():
     # Se nenhuma pasta padrão for encontrada, volta pro home
     return home
 
+# Voltar
+def Voltar():
+
+    pass
+
 # Def's para crias os ambientes virtuais:
 def MK_Venv(nome, dir):
 
@@ -110,8 +115,8 @@ def MK_Venv(nome, dir):
     os.makedirs(src_path, exist_ok=True)
 
 
-    # Cria o arquivo app.py vazio dentro da pasta src
-    app_py_path = os.path.join(src_path, "app.py")
+    # Cria o arquivo .py vazio dentro da pasta src
+    app_py_path = os.path.join(src_path, f"{nome}.py")
     open(app_py_path, "w").close()
 
     return DIR
