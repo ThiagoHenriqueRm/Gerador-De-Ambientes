@@ -1,6 +1,7 @@
 from imports import *
 from Tools import MK_react, JavaScriptDep, NomeValido, DirValido ,DesktopDir
 
+from containers import home
 
 def Javascript_React():
     
@@ -167,13 +168,33 @@ def Javascript_React():
     statusLabel.pack(pady=5)
 
 
+    # Frame button
+    ferme_button = CTK.CTkFrame(
+        master   = app,
+        fg_color = "#1e1e2e",
+    );ferme_button.pack(pady=20)
+
     # Botão criar projeto
     btn_criar = CTK.CTkButton(
-        master   = app, 
+        master   = ferme_button, 
         text     = " CRIAR PROJETO ",
         font     = FONTE,
         height   = 35,
         command  = CriarProjeto
-    );btn_criar.pack(pady=20)
+    );btn_criar.pack(side="left")
+
+
+    def Voltar():
+        app.destroy()
+        home.Home()
+
+    btn_voltar = CTK.CTkButton(
+        master  = ferme_button,
+        text    = "Voltar ➡",
+        command = Voltar,
+        font    = FONTE,
+        height  = 35,
+        width   = 35
+    );btn_voltar.pack(side="left", padx=(10, 0))
 
     app.mainloop()
